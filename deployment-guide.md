@@ -39,6 +39,14 @@ docker-compose build
 
 # tag images (example for cart-service)
 docker tag ecom_cart-service:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/ecom-cart-service:latest
+
+docker tag ecom_order-service:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/ecom-cart-service:latest
+
+docker tag ecom_product-service:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/ecom-cart-service:latest
+
+docker tag ecom_user-service:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/ecom-cart-service:latest
+
+docker tag ecom_frontend-service:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/ecom-cart-service:latest
 # repeat for other images (order, product, user, frontend)
 ```
 
