@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  frontend:
+    build: ./frontend
+    image: ecom_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - product-service
+      - user-service
+
+  cart-service:
+    build: ./backend/cart-service
+    image: ecom_cart-service
+    ports:
+      - "3001:3000"
+
+  order-service:
+    build: ./backend/order-service
+    image: ecom_order-service
+    ports:
+      - "3002:3000"
+
+  product-service:
+    build: ./backend/product-service
+    image: ecom_product-service
+    ports:
+      - "3003:3000"
+
+  user-service:
+    build: ./backend/user-service
+    image: ecom_user-service
+    ports:
+      - "3004:3000"
+
+networks:
+  default:
+    driver: bridge
